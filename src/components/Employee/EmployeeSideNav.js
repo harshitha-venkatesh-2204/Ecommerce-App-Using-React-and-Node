@@ -1,6 +1,6 @@
 import React from "react";
 import Logout from "../Logout";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function EmployeeSideNav() {
   return (
@@ -62,7 +62,7 @@ function EmployeeSideNav() {
               {/* Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library */}
               <li className="nav-item menu-open">
-                <Link to="/" className="d-block"><Logout/></Link>
+                <NavLink to="/" className="nav-item font-weight-bold"><Logout/></NavLink>
               </li>
             </ul>
           </nav>

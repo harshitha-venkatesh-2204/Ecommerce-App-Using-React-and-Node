@@ -36,10 +36,8 @@ function CustomerRegister() {
         });
 
         if (response.ok) {
-          // Registration successful, you can redirect to the customer dashboard
-          navigate("/customerDashboard");
+          navigate("/customer");
         } else {
-          // Registration failed, handle the error
           const data = await response.json();
           console.error('Registration failed:', data.error);
         }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Validation from "./LoginValidation";
+import Validation2 from "./LoginValidation2";
 
 
 function CustomerLogin() {
@@ -17,15 +17,32 @@ function CustomerLogin() {
     setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const validationErrors = Validation(values);
+    const validationErrors = Validation2(values);
     setErrors(validationErrors);
 
     // Check if there are no errors before redirecting
     if (Object.keys(validationErrors).length === 0) {
-      // Redirect to adminDashboard
-      navigate("/customerDashboard");
+      try {
+        // Make a POST request to your Node.js server
+        const response = await fetch('http://localhost:3001/customerLogin', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        });
+
+        if (response.ok) {
+          navigate("/customerDashboard");
+        } else {
+          const data = await response.json();
+          console.error('Login failed:', data.error);
+        }
+      } catch (error) {
+        console.error('Error during login:', error.message);
+      }
     }
   };
 

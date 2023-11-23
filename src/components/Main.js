@@ -6,8 +6,11 @@ import CustomerLogin from "./Customers/CustomerLoginAndRegistration/CustomerLogi
 import CustomerDashboard from "./Customers/CustomerDashboard";
 import CustomerRegistration from "./Customers/CustomerLoginAndRegistration/CustomerRegistration";
 import ForgotPassword from "./ForgotPassword";
-import RecoverPassword from "./RecoverPassword";
 import HomePage from "./HomePage";
+import Home from "./Products/Home";
+import About from "./Products/About";
+import Contact from "./Products/Contact";
+import Products from "./Products/Products";
 
 const Main = () => {
   return (
@@ -18,6 +21,10 @@ const Main = () => {
           <Route path="/employee" element={<EmployeeLogin />}></Route>
           <Route path="/customer" element={<CustomerLogin />}></Route>
           <Route path="/customerRegister" element={<CustomerRegistration/>}></Route>
+          <Route path="/about" element={<About/>}></Route>
+          <Route path="/home" element={<Home/>}></Route>
+          <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="/products" element={<Products/>}></Route>
           <Route
             path="/employeeDashboard"
             element={<EmployeeDashboard />}
@@ -25,10 +32,6 @@ const Main = () => {
           <Route
             path="/customerDashboard"
             element={<CustomerDashboard />}
-          ></Route>
-          <Route
-            path="/recoverPassword"
-            element={<RecoverPassword />}
           ></Route>
           <Route
             path="/forgotPassword"
