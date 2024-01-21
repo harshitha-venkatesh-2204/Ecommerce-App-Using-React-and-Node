@@ -33,7 +33,7 @@ const Products = () => {
           <div className="card-body" style={{ height: '200px' }}>
             <h5 className="card-title">{item.ProductName}</h5><br/>
             <p className="lead">${item.Price}</p>
-            <NavLink to={`/products/${item.ProductID}`} className="btn btn-primary">
+            <NavLink to={`/products/${item.ProductID}`} className="btn btn-outline-success">
               Buy Now
             </NavLink>{" "}
           </div>

@@ -48,7 +48,7 @@ function CustomerRegister() {
   };
 
   return (
-    <div className="lockscreen-wrapper">
+    <div className="lockscreen-wrapper"  style={{ marginTop: '13px' }}>
       <div className="login-box">
         <div className="card">
           <div className="card-header text-center">
@@ -149,14 +149,12 @@ function CustomerRegister() {
                 <i className="fab fa-facebook mr-2" /> Sign in using Facebook
               </a>
             </div>
-            <Link to="/forgotPassword" className="mb-1">
+            <Link to="/forgotPassword" className="nav-link">
               I forgot my password
             </Link>
-            <p className="mb-0">
-              <a href="/customerRegister" className="text-center">
-                Register a new membership
-              </a>
-            </p>
+            <Link to="/Customer" className="nav-link">
+              Already have an account?Login
+            </Link>
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@ const Header = () => {
             </ul>
             <div
               className="navbar-brand font-weight-bold"
-              style={{ marginRight: "250px" }}
+              style={{ marginRight: "250px"}}
             >
               A<strong>4</strong>
             </div>
@@ -44,7 +44,7 @@ const Header = () => {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-success" type="submit">
+              <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
             </form>

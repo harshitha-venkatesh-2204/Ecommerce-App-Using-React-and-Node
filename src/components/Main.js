@@ -11,6 +11,9 @@ import Home from "./Products/Home";
 import About from "./Products/About";
 import Contact from "./Products/Contact";
 import Products from "./Products/Products";
+import ProductDetail from "./Products/ProductDetail";
+import CartPage from "./Products/CartPage";
+import Checkout from "./Products/Checkout";
 
 const Main = () => {
   return (
@@ -25,6 +28,12 @@ const Main = () => {
           <Route path="/home" element={<Home/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
           <Route path="/products" element={<Products/>}></Route>
+          <Route path="/cart" element={<CartPage/>}></Route>
+          <Route path="/checkout" element={<Checkout/>}></Route>
+          <Route
+            path="/products/:id"  // Use a dynamic parameter
+            element={<ProductDetail />}
+          />
           <Route
             path="/employeeDashboard"
             element={<EmployeeDashboard />}

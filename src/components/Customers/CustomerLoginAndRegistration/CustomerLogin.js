@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Validation2 from "./LoginValidation2";
+
 
 
 function CustomerLogin() {
@@ -88,9 +89,12 @@ function CustomerLogin() {
               {errors.password && <span className="text-danger">{errors.password}</span>}
               <div className="row">
                 <div className="col-8">
-                  <Link to="/forgotPassword"className="mb-1">I forgot my password</Link>
+                  <Link to="/forgotPassword"className="nav-link">I forgot my password</Link>
                 </div>
               </div>
+              <p className="mb-0">
+                <NavLink to="/customerRegister"className="nav-link">Register a new membership</NavLink>
+            </p>
               <div className="row">
                 <div className="col-8">
                   <div className="icheck-primary">
